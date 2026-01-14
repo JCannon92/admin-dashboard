@@ -1,0 +1,27 @@
+body {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    height: 100vh;
+    margin: 0;
+}
+
+body > * {
+    border: 2px solid black;
+}
+
+header {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+section.sidebar {
+    grid-column: 1;
+    grid-row: 1 / 6;
+}
+
+section.content {
+    grid-column: 2;
+    grid-row: 2 / 6;
+}
