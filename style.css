@@ -173,7 +173,7 @@ header .button-menu button:hover {
 
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
 }
 
 .content .projects {
@@ -229,7 +229,6 @@ header .button-menu button:hover {
 }
 
 
-
 .content .announcements {
     grid-column: 2;
     grid-row: 1;
@@ -251,11 +250,20 @@ header .button-menu button:hover {
     margin: 0 40px;
 }
 
-.content .announcements-container article:not(:first-child):not(:last-child) {
-    border-top: 2px solid var(--grey);
-    border-bottom: 2px solid var(--grey);
+.content article {
+    border-top: 0.5px solid var(--orange);
+    border-bottom: 0.5px solid var(--orange);
 }
 
+.content article:first-child {
+    border-top: none;
+    border-bottom: 0.5px solid var(--orange);
+}
+
+.content article:last-child {
+    border-top: 0.5px solid var(--orange);
+    border-bottom: none;
+}
 
 .content .announcements-container article h3 {
     margin: 7px 0;
@@ -270,3 +278,35 @@ header .button-menu button:hover {
     grid-column: 2;
     grid-row: 2;
 }
+
+.content .trending-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
+    margin: 0 40px 40px 60px;
+}
+
+.content .trending-container article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.content .trending-container article h4,
+.content .trending-container article p {
+    margin: 0;
+}
+
+
+.content img.trending-profile {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 40px;
+    justify-self: center;
+}
+
